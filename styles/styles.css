@@ -1,0 +1,15 @@
+hr {
+    border: 0.5px solid #ededed;
+}
+
+.newBody {
+    letter-spacing: 0.5px;
+    font-size: 85%;
+}
+
+.navbar-brand {
+    font-size: 130%;
+}
+.navNew {
+    background-color: #86cfda;
+}
