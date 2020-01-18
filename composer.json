@@ -1,0 +1,12 @@
+{
+  "name": "emishkin/328/dating",
+  "authors": [
+    {
+      "name": "Evgenii Mishkin",
+      "email": "emishkin@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
