@@ -1,57 +1,48 @@
 <!--
     Author: Evgenii Mishkin
-    Date: 01/17/2020
+    Date: 01/24/2020
     URL: http://emishkin.greenriverdev.com/328/dating/views/home.html
-    Description: Registration system for a brand new online dating website.
+    Description: Registration system for a brand new online dating website. Home file.
 -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<include href="views/header.html">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <title>My Dating Website</title>
-</head>
 <body class="newBody">
 
-    <!-- Navigation bar -->
-    <nav class="navNew navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Block with text and image -->
+    <div class="row allElem m-5">
 
-        <!-- Logotype -->
-        <a class="navbar-brand ml-4 m-1" href="#">My Dating Website</a>
+        <!-- Text div -->
+        <div class="col mb-5 mt-5 ml-5">
+            <h1>My Dating Website</h1>
+            <p>Welcome to the web’s most successful dating website. At <strong>My Dating Website</strong>
+                you’ll meet another like minded individuals. We have the highest success rate of couples
+                on the web. User’s are matched by interest and location. Find out why so many
+                others have found love on our site!</p>
+            <br>
+            <h4>Hear what our users are saying about us.</h4>
+            <hr>
+            <p><em>"I met the love of my life after only a month!"</em></p>
+            <footer class="blockquote-footer">Andrea</footer>
+            <br>
+            <p><em>"It was so easy to set up and profile and start meeting people.
+                I didn't realize how many others were looking for love in my area."</em></p>
+            <footer class="blockquote-footer">John Smith</footer>
+            <br>
+            <p><em>"Just try it! You'll never be thr same!"</em></p>
+            <footer class="blockquote-footer">Sarah</footer>
+            <hr>
 
-    </nav>
+            <!-- Button div -->
+            <div class="text-center">
+                <button id="submit" type="submit" class="btn btn-primary position-relative">Create a Profile!</button>
+            </div>
+        </div>
 
-    <div class="container">
-        <br><br>
-        <img src="images/dating.png" class="rounded float-right m-lg-3" alt="dating picture" width="500">
-        <h1>My Dating Website</h1>
-        <p>Welcome to the web’s most successful dating website. At <strong>My Dating Website</strong>
-            you’ll meet another like minded individuals. We have the highest success rate of couples
-            on the web. User’s are matched by interest and location. Find out why so many
-            others have found love on our site!</p>
-        <br>
-        <h4>Hear what our users are saying about us.</h4>
-        <hr>
-        <p><em>"I met the love of my life after only a month!"</em></p>
-        <footer class="blockquote-footer">Andrea</footer>
-        <p><em>"It was so easy to set up and profile and start meeting people.
-            I didn't realize how many others were looking for love in my area."</em></p>
-        <footer class="blockquote-footer">John Smith</footer>
-        <p><em>"Just try it! You'll never be thr same!"</em></p>
-        <footer class="blockquote-footer">Sarah</footer>
-        <hr>
-        <button id="submit" type="submit" class="btn btn-primary">Create a Profile!</button>
-
+        <!-- Image div -->
+        <div class="col m-5">
+            <img src="images/dating.png" class="rounded float-right mr-3 ml-3" alt="dating picture" width="500">
+        </div>
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

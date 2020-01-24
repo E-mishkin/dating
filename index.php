@@ -2,7 +2,7 @@
 
     /**
      * Author: Evgenii Mishkin
-     * Date: 01/17/2020
+     * Date: 01/24/2020
      * URL: http://emishkin.greenriverdev.com/328/dating/index.php
      * Description: Registration system for a brand new online dating website.
      */
