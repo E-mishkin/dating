@@ -32,10 +32,16 @@
         echo $view->render('views/info.html');
     });
 
-    //Define an info route
+    //Define an profile route
     $f3->route('POST /profile', function (){
         $view = new Template();
         echo $view->render('views/profile.html');
+    });
+
+    //Define an interests route
+    $f3->route('POST /interests', function (){
+        $view = new Template();
+        echo $view->render('views/interests.html');
     });
 
     //Run fat free
