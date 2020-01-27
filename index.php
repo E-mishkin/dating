@@ -2,7 +2,7 @@
 
     /**
      * Author: Evgenii Mishkin
-     * Date: 01/24/2020
+     * Date: 01/26/2020
      * URL: http://emishkin.greenriverdev.com/328/dating/index.php
      * Description: Registration system for a brand new online dating website.
      */
@@ -55,6 +55,9 @@
 
     //Define an summary route
     $f3->route('POST /summary', function (){
+        $interests = $_POST['interests'];
+        $string = implode(" ",$interests);
+        $_SESSION['interests'] = $string;
         $view = new Template();
         echo $view->render('views/summary.html');
     });

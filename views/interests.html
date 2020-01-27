@@ -1,3 +1,10 @@
+<!--
+    Author: Evgenii Mishkin
+    Date: 01/26/2020
+    URL: http://emishkin.greenriverdev.com/328/dating/views/interests.html
+    Description: Interest page.
+-->
+
 <include href="views/header.html">
 
 <body class="newBody">
@@ -17,10 +24,10 @@
                 <div class="col mb-5 mt-4 ml-5">
                     <p class="font-weight-bold">In-door Interests</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="tv" id="tv" value="tv">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="tv" value="tv">
                         <label class="form-check-label mr-3" for="tv">tv</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="puzzles" id="puzzles" value="puzzles">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="puzzles" value="puzzles">
                         <label class="form-check-label" for="puzzles">puzzles</label>
                     </div>
                 </div>
@@ -28,10 +35,10 @@
                 <div class="col mb-5 mt-4 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="movies" id="movies" value="movies">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="movies" value="movies">
                         <label class="form-check-label mr-3" for="movies">movies</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="reading" id="reading" value="reading">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="reading" value="reading">
                         <label class="form-check-label" for="reading">reading</label>
                     </div>
                 </div>
@@ -39,10 +46,10 @@
                 <div class="col mb-5 mt-4 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="cooking" id="cooking" value="cooking">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="cooking" value="cooking">
                         <label class="form-check-label mr-3" for="cooking">cooking</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="playing cards" id="playing cards" value="playing cards">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="playing cards" value="playing cards">
                         <label class="form-check-label" for="playing cards">playing cards</label>
                     </div>
                 </div>
@@ -50,10 +57,10 @@
                 <div class="col mb-5 mt-4 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="board games" id="board games" value="board games">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="board games" value="board games">
                         <label class="form-check-label mr-3" for="board games">board games</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="video games" id="video games" value="video games">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="video games" value="video games">
                         <label class="form-check-label" for="video games">video games</label>
                     </div>
                 </div>
@@ -62,46 +69,40 @@
             <div class="row">
                 <!-- Checkboxes div -->
                 <div class="col mb-5 ml-5">
-                    <p class="font-weight-bold">In-door Interests</p>
+                    <p class="font-weight-bold">Out-door Interests</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="tv" id="tv" value="tv">
-                        <label class="form-check-label mr-3" for="tv">tv</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="hiking" value="hiking">
+                        <label class="form-check-label mr-3" for="hiking">hiking</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="puzzles" id="puzzles" value="puzzles">
-                        <label class="form-check-label" for="puzzles">puzzles</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="walking" value="walking">
+                        <label class="form-check-label" for="walking">walking</label>
                     </div>
                 </div>
 
                 <div class="col mb-5 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="movies" id="movies" value="movies">
-                        <label class="form-check-label mr-3" for="movies">movies</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="biking" value="biking">
+                        <label class="form-check-label mr-3" for="biking">biking</label>
                         <br>
-                        <input class="form-check-input" type="checkbox" name="reading" id="reading" value="reading">
-                        <label class="form-check-label" for="reading">reading</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="climbing" value="climbing">
+                        <label class="form-check-label" for="climbing">climbing</label>
                     </div>
                 </div>
 
                 <div class="col mb-5 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="cooking" id="cooking" value="cooking">
-                        <label class="form-check-label mr-3" for="cooking">cooking</label>
-                        <br>
-                        <input class="form-check-input" type="checkbox" name="playing cards" id="playing cards" value="playing cards">
-                        <label class="form-check-label" for="playing cards">playing cards</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="swimming" value="swimming">
+                        <label class="form-check-label mr-3" for="swimming">swimming</label>
                     </div>
                 </div>
 
                 <div class="col mb-5 ml-5">
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="board games" id="board games" value="board games">
-                        <label class="form-check-label mr-3" for="board games">board games</label>
-                        <br>
-                        <input class="form-check-input" type="checkbox" name="video games" id="video games" value="video games">
-                        <label class="form-check-label" for="video games">video games</label>
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="collecting" value="collecting">
+                        <label class="form-check-label mr-3" for="collecting">collecting</label>
                     </div>
                 </div>
 
@@ -118,9 +119,8 @@
     </form>
 
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-</html>
