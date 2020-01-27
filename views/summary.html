@@ -1,0 +1,73 @@
+<include href="views/header.html">
+
+<body class="newBody">
+
+    <form method="post" action="">
+
+        <!-- Block with fields -->
+        <div class="allElem m-5">
+
+            <div class="row">
+                <!-- Fields div -->
+                <div class="col mb-5 mt-5 ml-5">
+                    <table class="table table-bordered customTable rounded-top">
+                        <tbody>
+                        <tr>
+                            <td>Name: {{ @SESSION.firstname }} {{ @SESSION.lastname }}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender: {{ @SESSION.gender }}</td>
+                        </tr>
+                        <tr>
+                            <td>Age: {{ @SESSION.age }}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone: {{ @SESSION.phone }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email: {{ @SESSION.email }}</td>
+                        </tr>
+                        <tr>
+                            <td>State: {{ @SESSION.state }}</td>
+                        </tr>
+                        <tr>
+                            <td>Seeking: {{ @SESSION.seeking }}</td>
+                        </tr>
+                        <tr>
+                            <td>Interests: {{ @SESSION.phone }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <!-- Image div -->
+                <div class="col m-5">
+                    <div class="container">
+                        <img src="images/profile.png" class="float-right mr-3 ml-3" alt="profile picture" width="350">
+                    </div>
+                    <div class="container">
+                        <h4>Biography</h4>
+                        <p>{{ @SESSION.biography }}</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col mt-4 d-flex align-items-center flex-column">
+                <!-- Button div -->
+                <div class="text-center mb-5 mr-5 p-2">
+                    <input type="submit" class="btn btn-primary position-relative" value="Contact Me!">
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

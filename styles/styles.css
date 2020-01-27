@@ -17,3 +17,9 @@ hr {
     border-color: #ededed;
     border-radius: 5px;
 }
+
+.customTable {
+    border-color: #ededed !important;
+    border-radius: 5px !important;
+}
+

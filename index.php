@@ -34,14 +34,29 @@
 
     //Define an profile route
     $f3->route('POST /profile', function (){
+        $_SESSION['firstname'] = $_POST['firstname'];
+        $_SESSION['lastname'] = $_POST['lastname'];
+        $_SESSION['age'] = $_POST['age'];
+        $_SESSION['gender'] = $_POST['gender'];
+        $_SESSION['phone'] = $_POST['phone'];
         $view = new Template();
         echo $view->render('views/profile.html');
     });
 
     //Define an interests route
     $f3->route('POST /interests', function (){
+        $_SESSION['biography'] = $_POST['biography'];
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['state'] = $_POST['state'];
+        $_SESSION['seeking'] = $_POST['seeking'];
         $view = new Template();
         echo $view->render('views/interests.html');
+    });
+
+    //Define an summary route
+    $f3->route('POST /summary', function (){
+        $view = new Template();
+        echo $view->render('views/summary.html');
     });
 
     //Run fat free
