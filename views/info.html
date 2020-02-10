@@ -1,6 +1,6 @@
 <!--
     Author: Evgenii Mishkin
-    Date: 01/26/2020
+    Date: 02/09/2020
     URL: http://emishkin.greenriverdev.com/328/dating/views/info.html
     Description: Info page.
 -->
@@ -9,7 +9,7 @@
 
 <body class="newBody">
 
-    <form method="post" action="profile">
+    <form method="post" action="#">
 
         <!-- Block with fields -->
         <div class="allElem m-5">
@@ -23,13 +23,25 @@
                 <!-- Fields div -->
                 <div class="col mb-5 mt-5 ml-5">
                     <label class="font-weight-bold">First Name</label>
-                    <input class="form-control" type="text" name="firstname">
+                    <input class="form-control" type="text" name="firstname" value="{{ @firstname }}">
+                    <br>
+                    <check if="{{ @errors['firstname'] }}">
+                        <span class="alert alert-danger">{{ @errors['firstname'] }}</span><br>
+                    </check>
                     <br>
                     <label class="font-weight-bold">Last Name</label>
-                    <input class="form-control" type="text" name="lastname">
+                    <input class="form-control" type="text" name="lastname" value="{{ @lastname }}">
+                    <br>
+                    <check if="{{ @errors['lastname'] }}">
+                        <span class="alert alert-danger">{{ @errors['lastname'] }}</span><br>
+                    </check>
                     <br>
                     <label class="font-weight-bold">Age</label>
-                    <input class="form-control" type="text" name="age">
+                    <input class="form-control" type="text" name="age" value="{{ @age }}">
+                    <br>
+                    <check if="{{ @errors['age'] }}">
+                        <span class="alert alert-danger">{{ @errors['age'] }}</span><br>
+                    </check>
                     <br>
 
                     <p class="font-weight-bold">Gender</p>
@@ -42,7 +54,12 @@
                     <br><br>
 
                     <label class="font-weight-bold">Phone Number</label>
-                    <input class="form-control" type="text" name="phone">
+                    <input class="form-control" type="text" name="phone" value="{{ @phone }}">
+                    <br>
+                    <check if="{{ @errors['phone'] }}">
+                        <span class="alert alert-danger">{{ @errors['phone'] }}</span><br>
+                    </check>
+                    <br>
                 </div>
 
                 <div class="col mt-4 d-flex align-items-end flex-column" role="alert">

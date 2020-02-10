@@ -9,7 +9,7 @@
 
 <body class="newBody">
 
-    <form method="post" action="interests">
+    <form method="post" action="#">
 
         <!-- Block with fields -->
         <div class="allElem m-5">
@@ -23,8 +23,13 @@
                 <!-- Fields div -->
                 <div class="col mb-5 mt-5 ml-5">
                     <label class="font-weight-bold">Email</label>
-                    <input class="form-control" type="text" name="email">
+                    <input class="form-control" type="text" name="email" value="{{ @email }}">
                     <br>
+                    <check if="{{ @errors['email'] }}">
+                        <span class="alert alert-danger">{{ @errors['email'] }}</span><br>
+                    </check>
+                    <br>
+                    <!--
                     <label class="font-weight-bold">State</label>
                     <select class="form-control" name="state">
                         <option value="none">Select State</option>
@@ -78,6 +83,16 @@
                         <option value="WV">WV</option>
                         <option value="WI">WI</option>
                         <option value="WY">WY</option>
+                    </select>
+                    <br>
+                    -->
+
+                    <label class="font-weight-bold">State</label>
+                    <select class="form-control" name="state">
+                        <option value="none">Select State</option>
+                        <repeat group="{{ @states }}" value="{{ @state }}">
+                            <option value="{{ @state }}">{{ @state }}</option>
+                        </repeat>
                     </select>
                     <br>
 
