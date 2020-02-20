@@ -29,8 +29,9 @@
                                 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH',
                                 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX',
                                 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'));
-    $f3->set('interests', array('tv', 'puzzles', 'movies', 'reading', 'cooking', 'playing cards',
-                                'board games', 'video games'));
+    $f3->set('interests', array('tv', 'puzzles', 'movies', 'reading', 'cooking', 'playing cards', 'board games',
+                                 'video games'));
+    $f3->set('interestsOut', array('hiking', 'walking', 'biking', 'climbing', 'swimming', 'collecting'));
 
     //Define a default route
     $f3->route('GET /', function (){
