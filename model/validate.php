@@ -33,14 +33,6 @@
             $f3->set("errors['phone']", "Please enter a valid phone number");
         }
 
-        /*
-        if (!validEmail($f3->get('email'))) {
-
-            $isValid = false;
-            $f3->set("errors['email']", "Please enter a valid email");
-        }
-        */
-
         return $isValid;
     }
 
@@ -117,5 +109,35 @@
     function validEmail($email)
     {
         return !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+
+    /*
+     * Validate interests page form.
+     * @return boolean
+     */
+    function validInterests()
+    {
+        global $f3;
+        $isValid = true;
+
+        if (!validInDoor($f3->get('selectedInterests'))) {
+
+            $isValid = false;
+            $f3->set("errors['interests']", "Please enter any interests");
+        }
+
+        return $isValid;
+    }
+
+    /*
+     * Validate indoor interest.
+     * @param interest
+     * @return boolean
+     */
+    function validInDoor($selectedInterests)
+    {
+        global $f3;
+        //return in_array($selectedInterests, $f3->get('interests'));
+        return !empty($selectedInterests);
     }
 

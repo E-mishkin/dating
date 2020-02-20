@@ -9,7 +9,7 @@
 
 <body class="newBody">
 
-    <form method="post" action="summary">
+    <form method="post" action="#">
 
         <!-- Block with fields -->
         <div class="allElem m-5">
@@ -19,8 +19,9 @@
                 <hr>
             </div>
 
+            <!--
             <div class="row">
-                <!-- Checkboxes div -->
+
                 <div class="col mb-5 mt-4 ml-5">
                     <p class="font-weight-bold">In-door Interests</p>
                     <div class="form-check">
@@ -63,6 +64,30 @@
                         <input class="form-check-input" type="checkbox" name="interests[]" id="video games" value="video games">
                         <label class="form-check-label" for="video games">video games</label>
                     </div>
+                </div>
+            </div>
+            -->
+
+            <div class="row">
+                <div class="col mb-5 mt-4 ml-5">
+                    <p class="font-weight-bold">In-door Interests</p>
+                    <div class="form-check">
+                        <repeat group="{{ @interests }}" value="{{ @interestsOption }}">
+                            <label class="form-check-label mr-3"><input class="form-check-input" type="checkbox"
+                                          name="interests[]"
+                                          value="{{ @interestsOption }}"
+                                <check if="{{ isset(@selectedInterests) && in_array(@interestsOption, @selectedInterests) }}">
+                                    checked="checked"
+                                </check>
+                                >{{ @interestsOption }}
+                            </label><br>
+                        </repeat>
+                    </div>
+                    <br>
+                    <check if="{{ @errors['interests'] }}">
+                        <span class="alert alert-danger">{{ @errors['interests'] }}</span><br>
+                    </check>
+                    <br>
                 </div>
             </div>
 

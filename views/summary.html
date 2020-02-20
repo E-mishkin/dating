@@ -41,7 +41,7 @@
                             <td>Seeking: {{ @SESSION.seeking }}</td>
                         </tr>
                         <tr>
-                            <td>Interests: {{ @SESSION.interests }}</td>
+                            <td>Interests: {{ implode(", ", @SESSION.interests) }}</td>
                         </tr>
                         </tbody>
                     </table>
