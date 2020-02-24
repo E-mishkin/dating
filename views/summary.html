@@ -20,25 +20,25 @@
                     <table class="table table-bordered customTable rounded-top">
                         <tbody>
                         <tr>
-                            <td>Name: {{ @SESSION.firstname }} {{ @SESSION.lastname }}</td>
+                            <td>Name: {{ @SESSION.member->getFname() }} {{ @SESSION.member->getLname() }}</td>
                         </tr>
                         <tr>
-                            <td>Gender: {{ @SESSION.gender }}</td>
+                            <td>Gender: {{ @SESSION.member->getGender() }}</td>
                         </tr>
                         <tr>
-                            <td>Age: {{ @SESSION.age }}</td>
+                            <td>Age: {{ @SESSION.member->getAge() }}</td>
                         </tr>
                         <tr>
-                            <td>Phone: {{ @SESSION.phone }}</td>
+                            <td>Phone: {{ @SESSION.member->getPhone() }}</td>
                         </tr>
                         <tr>
-                            <td>Email: {{ @SESSION.email }}</td>
+                            <td>Email: {{ @SESSION.member->getEmail() }}</td>
                         </tr>
                         <tr>
-                            <td>State: {{ @SESSION.state }}</td>
+                            <td>State: {{ @SESSION.member->getState() }}</td>
                         </tr>
                         <tr>
-                            <td>Seeking: {{ @SESSION.seeking }}</td>
+                            <td>Seeking: {{ @SESSION.member->getSeeking() }}</td>
                         </tr>
                         <tr>
                             <td>Interests: {{ implode(", ", @SESSION.interests) }}</td>

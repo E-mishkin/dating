@@ -99,6 +99,10 @@ class Controller
                 $_SESSION['state'] = $state;
                 $_SESSION['biography'] = $biography;
                 $_SESSION['seeking'] = $seeking;
+                $_SESSION['member']->setEmail($email);
+                $_SESSION['member']->setState($state);
+                $_SESSION['member']->setSeeking($seeking);
+                $_SESSION['member']->setBio($biography);
 
                 //Redirect to the next page
                 if($_SESSION['prem'] == 'premium')
@@ -134,6 +138,7 @@ class Controller
 
                 //Write data to Session
                 $_SESSION['interests'] = $selectedInterests;
+                $_SESSION['member']->setIndoor($selectedInterests);
 
                 //Redirect to profile page
                 $_f3->reroute('/summary');
