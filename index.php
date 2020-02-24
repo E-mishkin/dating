@@ -7,9 +7,6 @@
      * Description: Registration system for a brand new online dating website.
      */
 
-    //Start session
-    session_start();
-
     // Turn on error reporting - this is critical!
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
@@ -17,6 +14,9 @@
     //Require the autoload file
     require_once('vendor/autoload.php');
     require_once('model/validate.php');
+
+    //Start session
+    session_start();
 
     //Create an instance of the base class
     $f3 = Base::instance();
@@ -51,6 +51,15 @@
             $age = $_POST['age'];
             $phone = $_POST['phone'];
             $gender = $_POST['gender'];
+
+            //check if checkbox set up
+            if (!empty($_POST['premium']))
+            {
+                $premMember = new PremiumMember();
+            }
+            else {
+                $member = new Member();
+            }
 
             //Add data to hive
             $f3->set('firstname', $firstname);
