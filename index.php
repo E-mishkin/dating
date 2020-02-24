@@ -33,15 +33,19 @@
                                  'video games'));
     $f3->set('interestsOut', array('hiking', 'walking', 'biking', 'climbing', 'swimming', 'collecting'));
 
+    $controller = new Controller($f3);
+
     //Define a default route
     $f3->route('GET /', function (){
-        $view = new Template();
-        echo $view->render('views/home.html');
+        $GLOBALS['controller']->home();
     });
 
     //Define an info route
     $f3->route('GET|POST /info', function ($f3){
 
+        $GLOBALS['controller']->info($f3);
+
+        /*
         //If form has been submitted, validate
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -86,11 +90,14 @@
 
         $view = new Template();
         echo $view->render('views/info.html');
+        */
     });
 
     //Define a profile route
     $f3->route('GET|POST /profile', function ($f3){
 
+        $GLOBALS['controller']->profile($f3);
+        /*
         //If form has been submitted, validate
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -122,11 +129,14 @@
 
         $view = new Template();
         echo $view->render('views/profile.html');
+        */
     });
 
     //Define an interests route
     $f3->route('GET|POST /interests', function ($f3){
 
+        $GLOBALS['controller']->interests($f3);
+        /*
         //If form has been submitted, validate
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -150,13 +160,12 @@
 
         $view = new Template();
         echo $view->render('views/interests.html');
+        */
     });
 
     //Define an summary route
     $f3->route('GET|POST /summary', function (){
-
-        $view = new Template();
-        echo $view->render('views/summary.html');
+        $GLOBALS['controller']->summary();
     });
 
     //Run fat free
