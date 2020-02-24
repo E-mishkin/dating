@@ -42,125 +42,17 @@
 
     //Define an info route
     $f3->route('GET|POST /info', function ($f3){
-
         $GLOBALS['controller']->info($f3);
-
-        /*
-        //If form has been submitted, validate
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            //Get data from form
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $age = $_POST['age'];
-            $phone = $_POST['phone'];
-            $gender = $_POST['gender'];
-
-            //check if checkbox set up
-            if (!empty($_POST['premium']))
-            {
-                $premMember = new PremiumMember();
-            }
-            else {
-                $member = new Member();
-            }
-
-            //Add data to hive
-            $f3->set('firstname', $firstname);
-            $f3->set('lastname', $lastname);
-            $f3->set('age', $age);
-            $f3->set('phone', $phone);
-            $f3->set('gender', $gender);
-
-            //If data is valid
-            if (validInfo()) {
-
-                //Write data to Session
-                $_SESSION['firstname'] = $firstname;
-                $_SESSION['lastname'] = $lastname;
-                $_SESSION['age'] = $age;
-                $_SESSION['phone'] = $phone;
-                $_SESSION['gender'] = $gender;
-
-                //Redirect to profile page
-                $f3->reroute('/profile');
-            }
-
-        }
-
-        $view = new Template();
-        echo $view->render('views/info.html');
-        */
     });
 
     //Define a profile route
     $f3->route('GET|POST /profile', function ($f3){
-
         $GLOBALS['controller']->profile($f3);
-        /*
-        //If form has been submitted, validate
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            //Get data from form
-            $email = $_POST['email'];
-            $state = $_POST['state'];
-            $seeking = $_POST['seeking'];
-            $biography = $_POST['biography'];
-
-            //Add data to hive
-            $f3->set('email', $email);
-            $f3->set('state', $state);
-            $f3->set('seeking', $seeking);
-            $f3->set('biography', $biography);
-
-            //If data is valid
-            if (validProfile()) {
-
-                //Write data to Session
-                $_SESSION['email'] = $email;
-                $_SESSION['state'] = $state;
-                $_SESSION['biography'] = $biography;
-                $_SESSION['seeking'] = $seeking;
-
-                //Redirect to profile page
-                $f3->reroute('/interests');
-            }
-        }
-
-        $view = new Template();
-        echo $view->render('views/profile.html');
-        */
     });
 
     //Define an interests route
     $f3->route('GET|POST /interests', function ($f3){
-
         $GLOBALS['controller']->interests($f3);
-        /*
-        //If form has been submitted, validate
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            //Get data from form
-            //$selectedInterests = !empty($_POST['interests']) ? $_POST['interests'] : array();
-            $selectedInterests = $_POST['interests'];
-
-            //Add data to hive
-            $f3->set('selectedInterests', $selectedInterests);
-
-            //If data is valid
-            if (validInterests()) {
-
-                //Write data to Session
-                $_SESSION['interests'] = $selectedInterests;
-
-                //Redirect to profile page
-                $f3->reroute('/summary');
-            }
-        }
-
-        $view = new Template();
-        echo $view->render('views/interests.html');
-        */
     });
 
     //Define an summary route

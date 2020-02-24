@@ -3,7 +3,6 @@
 class Controller
 {
     private $_f3;
-    private $_val;
 
     /**
      * Controller constructor.
@@ -31,6 +30,7 @@ class Controller
             $age = $_POST['age'];
             $phone = $_POST['phone'];
             $gender = $_POST['gender'];
+            $memCheck = $_POST['premium'];
 
 
             //Add data to hive
@@ -40,17 +40,22 @@ class Controller
             $_f3->set('phone', $phone);
             $_f3->set('gender', $gender);
 
-            //check if checkbox set up
-            if (!empty($_POST['premium']))
-            {
-                $premMember = new PremiumMember($firstname, $lastname, $age, $gender, $phone);
-            }
-            else {
-                $member = new Member($firstname, $lastname, $age, $gender, $phone);
-            }
 
             //If data is valid
             if (validInfo()) {
+
+                //check if checkbox set up
+                if ($memCheck == 'premium')
+                {
+                    $premMember = new PremiumMember($firstname, $lastname, $age, $gender, $phone);
+                    $_SESSION['member'] = $premMember;
+                    $_SESSION['prem'] = $_POST['premium'];;
+                }
+                else {
+                    $member = new Member($firstname, $lastname, $age, $gender, $phone);
+                    $_SESSION['member'] = $member;
+                    $_SESSION['prem'] = $member;
+                }
 
                 //Write data to Session
                 $_SESSION['firstname'] = $firstname;
@@ -95,8 +100,16 @@ class Controller
                 $_SESSION['biography'] = $biography;
                 $_SESSION['seeking'] = $seeking;
 
-                //Redirect to profile page
-                $_f3->reroute('/interests');
+                //Redirect to the next page
+                if($_SESSION['prem'] == 'premium')
+                {
+                    $_f3->reroute('/interests');
+                }
+                else
+                {
+                    $_f3->reroute('/summary');
+                }
+
             }
         }
 
