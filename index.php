@@ -33,6 +33,7 @@
                                  'video games'));
     $f3->set('interestsOut', array('hiking', 'walking', 'biking', 'climbing', 'swimming', 'collecting'));
 
+    $db = new Database();
     $controller = new Controller($f3);
 
     //Define a default route
@@ -58,6 +59,11 @@
     //Define an summary route
     $f3->route('GET|POST /summary', function (){
         $GLOBALS['controller']->summary();
+    });
+
+    //Define an admin route
+    $f3->route('GET /admin', function (){
+        $GLOBALS['controller']->admin();
     });
 
     //Run fat free

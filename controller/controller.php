@@ -15,6 +15,11 @@ class Controller
 
     public function home()
     {
+        /*
+        $member = $GLOBALS['db']->getMembers();
+        $this->_f3->set('member', $member);
+        */
+
         $view = new Template();
         echo $view->render('views/home.html');
     }
@@ -49,12 +54,18 @@ class Controller
                 {
                     $premMember = new PremiumMember($firstname, $lastname, $age, $gender, $phone);
                     $_SESSION['member'] = $premMember;
-                    $_SESSION['prem'] = $_POST['premium'];;
+                    $_SESSION['prem'] = $_POST['premium'];
+
+                    //Write student to the database
+                    //$GLOBALS['db']->insertMember($premMember);
                 }
                 else {
                     $member = new Member($firstname, $lastname, $age, $gender, $phone);
                     $_SESSION['member'] = $member;
                     $_SESSION['prem'] = $member;
+
+                    //Write student to the database
+                    //$GLOBALS['db']->insertMember($member);
                 }
 
                 //Write data to Session
@@ -153,6 +164,12 @@ class Controller
     {
         $view = new Template();
         echo $view->render('views/summary.html');
+    }
+
+    public function admin()
+    {
+        $view = new Template();
+        echo $view->render('views/admin.php');
     }
 }
 
